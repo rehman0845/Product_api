@@ -1,6 +1,9 @@
 ﻿var app = angular.module("myapp", ["ngRoute"]);
 app.config(function ($routeProvider) {
     $routeProvider
+        .when("/", {
+            templateUrl:"/app/shared/_index.html"
+        })
         .when("/login", {
             templateUrl: "/app/login/Login.html",
             controller:"logincontroller"

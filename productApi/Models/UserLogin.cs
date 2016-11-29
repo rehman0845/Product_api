@@ -12,7 +12,7 @@ namespace productApi.Models
         public int Id { get; set; }
         public string UserEmail { get; set; }
         public string password { get; set; }
-        public IList<role> role { get; set; }
+        public IList<role> roles { get; set; }
 
     }
 }

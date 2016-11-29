@@ -1,18 +1,22 @@
-﻿<div >
-    <div>
-        <h4>Login</h4>
-    </div>
-    <div>
-        <div>
-            <label>Email</label>
-            <input type="email" ng-model="email">
+﻿<a href="/app/register/register.html" class="nav navbar-right">Register</a>
+<div ng-controller="logincontroller">
+<form >
+    <div class="form-group">
+        <label class="control-label col-md-2">Email</label>
+        <div class="col-md-10">
+            <input type="email" ng-model="emailId">
         </div>
-        <div>
-            <label>password</label>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2">password</label>
+        <div class="col-md-10">
             <input type="text" ng-model="password">
         </div>
-        <div>
-            <button class="btn btn-primary">Login</button>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" ng-click="login()" value="Login" class="btn btn-default" />
         </div>
     </div>
+</form>
 </div>
