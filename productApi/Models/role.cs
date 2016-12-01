@@ -9,7 +9,7 @@ namespace productApi.Models
     public class role
     {
         [Key]
-        public int Id { get; set; }
+        public int roleId { get; set; }
         public string roleName { get; set; }
     }
 }

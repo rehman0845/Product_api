@@ -87,7 +87,6 @@
     <Content Include="app\login\Login.html" />
     <Content Include="app\register\controller.js" />
     <Content Include="app\register\register.html" />
-    <Content Include="app\shared\_index.html" />
     <Content Include="App_Data\MyProject.sdf" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -891,6 +890,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612011525440_InitialCreate.cs" />
+    <Compile Include="Migrations\201612011525440_InitialCreate.Designer.cs">
+      <DependentUpon>201612011525440_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612011530456_intitial.cs" />
+    <Compile Include="Migrations\201612011530456_intitial.Designer.cs">
+      <DependentUpon>201612011530456_intitial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\role.cs" />
     <Compile Include="Models\user.cs" />
     <Compile Include="Models\UserContext.cs" />
@@ -929,10 +937,19 @@
     <Folder Include="app\assests\js\" />
     <Folder Include="app\assests\libraries\" />
     <Folder Include="app\components\" />
+    <Folder Include="app\shared\" />
     <Folder Include="App_Code\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201612011525440_InitialCreate.resx">
+      <DependentUpon>201612011525440_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612011530456_intitial.resx">
+      <DependentUpon>201612011530456_intitial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

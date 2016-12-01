@@ -1,13 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;  
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
 using System.Web;
 
 namespace productApi.Models
 {
     public class UserRole
     {
-        public UserLogin userId { get; set; }
-        public role roleId { get; set; }
+        [Key]
+        public int Id { get; set; }
+     
+        public int userId { get; set; }
+        public int roleId { get; set; }
+        public user user { get; set; }
+        public role role { get; set; }
     }
 }

@@ -11,8 +11,8 @@ namespace productApi.Models
         [Key]
         public int Id { get; set; }
         public string UserEmail { get; set; }
-        public string password { get; set; }
-        public IList<role> roles { get; set; }
+        public string guid { get; set; }
+        public role role { get; set; }
 
     }
 }

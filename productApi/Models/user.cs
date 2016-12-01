@@ -13,7 +13,6 @@ namespace productApi.Models
         public int userId { get; set; }
         public string useremail { get; set; }
         public string password { get; set; }
-
-
+    
     }
 }

@@ -30,8 +30,9 @@ namespace productApi.Controllers
         [Route("api/Account/Register")]
         public IHttpActionResult Register(user user)
         {
-            user.userId = 1;
+            
             re.users.Add(user);
+            re.SaveChanges();
             return Ok();
         }
         
