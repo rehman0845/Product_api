@@ -1,6 +1,6 @@
-﻿
-
-<form>
+﻿<h3>New User</h3>
+<div class="form-group">
+    <form name="registerform">
     <div class="form-group">
         <label class="control-label col-md-2">Email</label>
         <div class="col-md-10">
@@ -16,12 +16,14 @@
     <div class="form-group">
         <label class="control-label col-md-2">Re-password</label>
         <div class="col-md-10">
-            <input type="password" ng-model="Reg.repassword">
+            <input type="password" ng-model="Reg.repassword" ng-pattern={{Reg.password}}>
+            <p style="color:red" ng-show="registerform.Reg.password.$touched && registerform.Reg.password.$invalid">password is not matching</p>
         </div>
     </div>
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Register" class="btn btn-default" ng-click="register()" />
+            <input type="submit" value="Register" class="btn btn-default" ng-click="register()" ng-disabled="!registerform.$valid" />
         </div>
     </div>
 </form>
+</div>

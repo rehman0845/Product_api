@@ -28,12 +28,20 @@ namespace productApi.Controllers
         
         [HttpPost]
         [Route("api/Account/Register")]
-        public IHttpActionResult Register(user user)
+        public HttpResponseMessage Register(user user)
         {
+            try
+            {
+                re.users.Add(user);
+                re.SaveChanges();
+                var response = Request.CreateResponse(HttpStatusCode.Created);
+                return response;
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest,ex);
+            }
             
-            re.users.Add(user);
-            re.SaveChanges();
-            return Ok();
         }
         
     }
